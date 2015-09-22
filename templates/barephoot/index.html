@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Barephoot</title>
+    </head>
+
+    <body>
+        <h1>Let's Hangout</h1>
+        {% if categories %}
+            <ul>
+                {% for category in categories %}
+                <li>{{category}}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>No Categories Present</strong><br />
+        {% endif %}
+        <a href="/barephoot/about/">About</a><br />
+    </body>
+
+</html>
