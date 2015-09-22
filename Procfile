@@ -1,1 +1,1 @@
-web: gunicorn barephoot.wsgi
+web: gunicorn dev_project.wsgi
