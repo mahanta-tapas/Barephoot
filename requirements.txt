@@ -13,6 +13,5 @@ pycrypto==2.6.1
 pycups==1.9.66
 pyxdg==0.25
 requests==2.2.1
-sessioninstaller==0.0.0
 urllib3==1.7.1
 
