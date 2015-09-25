@@ -71,10 +71,10 @@ WSGI_APPLICATION = 'dev_project.wsgi.application'
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_test',
-        'USER': 'postgres',
-        'PASSWORD': 'tapaskumar',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'NAME': 'd6vk6eqfc5ckkg',
+        'USER': 'ajrpoimqxmnibi',
+        'PASSWORD': 'zXStwkYmAUm6Z0kzoarx0t2CFX',
+        'HOST': 'ec2-50-16-238-141.compute-1.amazonaws.com',   # Or an IP Address that your DB is hosted on
         'PORT': '5432',
     }
 }
