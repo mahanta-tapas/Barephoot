@@ -2,6 +2,8 @@ from rest_framework import serializers
 from barephoot.models import Movdata
 from barephoot.models import Restdata
 from barephoot.models import TheatreDetail
+from barephoot.models import PlacestoVisit
+from barephoot.models import Events
 from django.contrib.auth.models import User
 
 
@@ -28,3 +30,16 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('id','username','barephoot')
+
+class PlaceSerializer(serializers.ModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
+    class Meta:
+        model = PlacestoVisit
+        fields = ('name','address','category','timings')
+
+
+class EventSerializer(serializers.ModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
+    class Meta:
+        model = Events
+        fields = ('name','address','day','time')

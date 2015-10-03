@@ -2,11 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from barephoot.models import Movdata
 from barephoot.models import Restdata
+from barephoot.models import PlacestoVisit
+from barephoot.models import Events
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 from barephoot.serializers import Nserializer
 from barephoot.serializers import Rserializer
+from barephoot.serializers import PlaceSerializer
+from barephoot.serializers import EventSerializer
 from rest_framework import status
 from rest_framework.decorators import api_view,permission_classes
 from rest_framework import permissions
@@ -122,6 +126,112 @@ class ResDetail(APIView):
     def put(self, request, id, format=None):
         res = self.get_object(id)
         serializer = Rserializer(res, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, id, format=None):
+        res = self.get_object(id)
+        res.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@permission_classes((permissions.AllowAny,))
+class PlacesList(APIView):
+
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    def get(self,request,format=None):
+        res = PlacestoVisit.objects.all()
+        serializer = PlaceSerializer(res,many=True)
+        return Response(serializer.data)
+
+
+    def post(self, request, format=None):
+        serializer = PlaceSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
+
+@permission_classes((permissions.AllowAny,))
+class PlacesDetail(APIView):
+    """
+    Retrieve, update or delete a Movdata instance.
+    """
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,IsOwnerOrReadOnly,)
+    def get_object(self, id):
+        try:
+            return PlacestoVisit.objects.get(id=id)
+        except Restdata.DoesNotExist:
+            raise Http404
+
+    def get(self, request, id, format=None):
+        res = self.get_object(id)
+        serializer = PlaceSerializer(res)
+        return Response(serializer.data)
+
+    def put(self, request, id, format=None):
+        res = self.get_object(id)
+        serializer = PlaceSerializer(res, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, id, format=None):
+        res = self.get_object(id)
+        res.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+
+
+@permission_classes((permissions.AllowAny,))
+class EventList(APIView):
+
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    def get(self,request,format=None):
+        res = Events.objects.all()
+        serializer = EventSerializer(res,many=True)
+        return Response(serializer.data)
+
+
+    def post(self, request, format=None):
+        serializer = EventSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
+
+@permission_classes((permissions.AllowAny,))
+class EventsDetail(APIView):
+    """
+    Retrieve, update or delete a Movdata instance.
+    """
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,IsOwnerOrReadOnly,)
+    def get_object(self, id):
+        try:
+            return Events.objects.get(id=id)
+        except Restdata.DoesNotExist:
+            raise Http404
+
+    def get(self, request, id, format=None):
+        res = self.get_object(id)
+        serializer = EventSerializer(res)
+        return Response(serializer.data)
+
+    def put(self, request, id, format=None):
+        res = self.get_object(id)
+        serializer = EventSerializer(res, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)

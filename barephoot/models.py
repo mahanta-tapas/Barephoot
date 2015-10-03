@@ -29,6 +29,18 @@ class Restdata(models.Model):
     owner = models.ForeignKey('auth.user',related_name='barephoot2')
 
 
+class PlacestoVisit(models.Model):
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=50)
+    timings = models.CharField(max_length=50)
+    category = models.CharField(max_length=50)
+
+class Events(models.Model):
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=50)
+    day = models.CharField(max_length=10)
+    time = models.CharField(max_length=10)
+
     def __unicode__(self):
         return (self.name)
 

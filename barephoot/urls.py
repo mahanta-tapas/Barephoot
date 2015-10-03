@@ -14,6 +14,12 @@ url(r'^detail/mov(?P<id>[0-9])+/',views.MovDetail.as_view(),name='detail'),
 url(r'^list/res',views.ResList.as_view(),name='list'),
 url(r'^detail/res(?P<id>[0-9])+/',views.ResDetail.as_view(),name='detail'),
 
+url(r'^list/places',views.PlacesList.as_view(),name='list'),
+url(r'^detail/places(?P<id>[0-9])+/',views.PlacesDetail.as_view(),name='detail'),
+
+url(r'^list/events',views.EventList.as_view(),name='list'),
+url(r'^detail/events(?P<id>[0-9])+/',views.EventsDetail.as_view(),name='detail'),
+
 url(r'^users/$', views.UserList.as_view()),
 url(r'^users/(?P<pk>[0-9]+)/$', views.UserDetail.as_view()),
 )
