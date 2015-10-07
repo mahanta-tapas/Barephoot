@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev_project/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.04" vertical-offset="604" max-vertical-offset="1575">
-              <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.5950324" vertical-offset="604" max-vertical-offset="1575">
+              <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
               <folding>
                 <element signature="e#322#331#0" expanded="true" />
               </folding>
@@ -36,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/barephoot/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5345572" vertical-offset="0" max-vertical-offset="926">
+            <state vertical-scroll-proportion="-19.8" vertical-offset="0" max-vertical-offset="780">
               <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
               <folding />
             </state>
@@ -112,12 +112,12 @@
         <option value="$PROJECT_DIR$/templates/barephoot/index.html" />
         <option value="$PROJECT_DIR$/barephoot/permissions.py" />
         <option value="$PROJECT_DIR$/dev_project/urls.py" />
-        <option value="$PROJECT_DIR$/dev_project/settings.py" />
         <option value="$PROJECT_DIR$/barephoot/serializers.py" />
         <option value="$PROJECT_DIR$/barephoot/admin.py" />
         <option value="$PROJECT_DIR$/barephoot/views.py" />
         <option value="$PROJECT_DIR$/barephoot/urls.py" />
         <option value="$PROJECT_DIR$/barephoot/models.py" />
+        <option value="$PROJECT_DIR$/dev_project/settings.py" />
       </list>
     </option>
   </component>
@@ -864,21 +864,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev_project/settings.py">
+    <entry file="file://$PROJECT_DIR$/barephoot/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.04" vertical-offset="604" max-vertical-offset="1575">
-          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
-          <folding>
-            <element signature="e#322#331#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-19.8" vertical-offset="0" max-vertical-offset="780">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/barephoot/models.py">
+    <entry file="file://$PROJECT_DIR$/dev_project/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5345572" vertical-offset="0" max-vertical-offset="926">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-          <folding />
+        <state vertical-scroll-proportion="0.5950324" vertical-offset="604" max-vertical-offset="1575">
+          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+          <folding>
+            <element signature="e#322#331#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
