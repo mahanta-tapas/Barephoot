@@ -35,7 +35,7 @@ class PlacestoVisit(models.Model):
     timings = models.CharField(max_length=50)
     category = models.CharField(max_length=50)
     rating = models.CharField(max_length=50)
-    review_count = models.CharField()
+    review_count = models.CharField(max_length=50)
 
 class Events(models.Model):
     name = models.CharField(max_length=100)
