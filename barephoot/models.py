@@ -38,10 +38,10 @@ class PlacestoVisit(models.Model):
     review_count = models.CharField(max_length=50)
 
 class Events(models.Model):
-    name = models.CharField(max_length=100)
-    address = models.CharField(max_length=50)
-    day = models.CharField(max_length=10)
-    time = models.CharField(max_length=10)
+    name = models.CharField(max_length=300)
+    address = models.CharField(max_length=200)
+    day = models.CharField(max_length=200)
+    time = models.CharField(max_length=200)
 
     def __unicode__(self):
         return (self.name)
