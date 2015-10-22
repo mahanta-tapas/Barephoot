@@ -30,7 +30,7 @@ class Restdata(models.Model):
 
 
 class PlacestoVisit(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=300)
     address = models.CharField(max_length=200)
     timings = models.CharField(max_length=200)
     category = models.CharField(max_length=200)
