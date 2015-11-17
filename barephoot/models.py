@@ -42,6 +42,8 @@ class PlacestoVisit(models.Model):
 class Events(models.Model):
     name = models.CharField(max_length=300)
     address = models.CharField(max_length=200)
+    lat = models.FloatField()
+    long = models.FloatField()
     day = models.CharField(max_length=200)
     time = models.CharField(max_length=200)
 

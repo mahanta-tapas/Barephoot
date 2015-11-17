@@ -42,4 +42,4 @@ class EventSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Events
-        fields = ('name','address','day','time','owner')
+        fields = ('name','address','lat','long','day','time','owner')
