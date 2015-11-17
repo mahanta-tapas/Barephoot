@@ -32,6 +32,8 @@ class Restdata(models.Model):
 class PlacestoVisit(models.Model):
     name = models.CharField(max_length=300)
     address = models.CharField(max_length=200)
+    lat = models.FloatField()
+    long = models.FloatField()
     timings = models.CharField(max_length=200)
     category = models.CharField(max_length=200)
     rating = models.CharField(max_length=50)

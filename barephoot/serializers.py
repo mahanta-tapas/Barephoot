@@ -35,7 +35,7 @@ class PlaceSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = PlacestoVisit
-        fields = ('name','address','category','timings','rating','review_count','owner')
+        fields = ('name','address','lat','long','category','timings','rating','review_count','owner')
 
 
 class EventSerializer(serializers.ModelSerializer):
