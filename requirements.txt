@@ -4,7 +4,7 @@ MySQL-python==1.2.5
 django-filter==0.11.0
 djangorestframework==3.2.3
 html5lib==0.999
-httplib2==0.8
+httplib2==0.19.0
 oauthlib==0.6.1
 piston-mini-client==0.7.5
 psycopg2==2.6.1
