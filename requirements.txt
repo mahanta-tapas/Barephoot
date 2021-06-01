@@ -12,6 +12,6 @@ pyOpenSSL==0.13
 pycrypto==2.6.1
 pyxdg==0.25
 requests==2.2.1
-urllib3==1.7.1
+urllib3==1.26.5
 South==1.0.2
 
